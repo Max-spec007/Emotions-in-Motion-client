@@ -1,1 +1,54 @@
+$primary: black;
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+
+.body {
+  background-image: url('./Background-4.jpg');
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.comments-page {
+  font-family: 'Orbitron', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+}
+
+.create {
+  font-family: 'Orbitron', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+.comment-page {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.comment-update {
+  font-family: 'Orbitron', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 60px;
+}
+
+a {
+  color: #000000;
+}

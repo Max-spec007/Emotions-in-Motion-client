@@ -8,6 +8,10 @@ import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
+import CommentCreate from '../CommentCreate/CommentCreate'
+import CommentIndex from '../CommentIndex/CommentIndex'
+import CommentShow from '../CommentShow/CommentShow'
+import CommentUpdate from '../CommentUpdate/CommentUpdate'
 
 class App extends Component {
   constructor () {
@@ -55,6 +59,26 @@ class App extends Component {
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
+        <div>
+          <AuthenticatedRoute path="/create" user={user} render={() => (
+            <CommentCreate user={user} msgAlert={this.msgAlert}/>
+          )}/>
+        </div>
+        <div>
+          <Route exact path="/" user={user} render={() => (
+            <CommentIndex user={user}/>
+          )}/>
+        </div>
+        <div>
+          <AuthenticatedRoute path="/comments/:id" user={user} render={props => (
+            <CommentShow user={user} msgAlert={this.msgAlert} match={props.match}/>
+          )}/>
+        </div>
+        <div>
+          <Route path="/comments/:id" user={user} render={props => (
+            <CommentUpdate user={user} match={props.match}/>
+          )}/>
+        </div>
       </Fragment>
     )
   }

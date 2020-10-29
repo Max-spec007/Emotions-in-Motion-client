@@ -7,7 +7,9 @@ import { HashRouter } from 'react-router-dom'
 
 const appJsx = (
   <HashRouter>
-    <App />
+    <div className='body'>
+      <App />
+    </div>
   </HashRouter>
 )
 
