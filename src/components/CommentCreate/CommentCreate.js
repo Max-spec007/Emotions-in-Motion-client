@@ -61,7 +61,7 @@ class CommentCreate extends React.Component {
 
     return (
       <div className='create'>
-        <h2>Comment Create</h2>
+        <h2>Create Words of Positivity</h2>
         <form onSubmit={this.handleSubmit}>
           <input name="notes" type="text" placeholder="Notes" value={this.state.comment.notes} onChange={this.handleChange} />
           <input name="date" type="text" placeholder="Date" value={this.state.comment.date} onChange={this.handleChange} />

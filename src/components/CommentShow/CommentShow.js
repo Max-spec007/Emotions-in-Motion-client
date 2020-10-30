@@ -70,7 +70,7 @@ class CommentShow extends React.Component {
         })
     } else {
       this.props.msgAlert({
-        heading: 'YOU HAVE ALREADY LIKED THE COMMENTED',
+        heading: 'YOU HAVE ALREADY LIKED THIS COMMENT',
         message: 'UNSUCCESSFUL LIKE',
         variant: 'danger'
       })
@@ -132,7 +132,7 @@ class CommentShow extends React.Component {
     }
     return (
       <div className='comment-page'>
-        <h2>Comments Page</h2>
+        <h2>Your Comment</h2>
         {jsx}
       </div>
     )
