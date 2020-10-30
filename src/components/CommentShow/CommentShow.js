@@ -124,7 +124,7 @@ class CommentShow extends React.Component {
           {button}
           <ul>
             {this.state.comment.likes.map(like => (
-              <li key={like.owner._id}>{like.owner.email}</li>
+              <li key={like.owner._id}>{like.owner.email} {'😍'}</li>
             ))}
           </ul>
         </div>

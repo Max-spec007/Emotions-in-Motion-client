@@ -76,7 +76,7 @@ class App extends Component {
         </div>
         <div>
           <Route path="/comments/:id" user={user} render={props => (
-            <CommentUpdate user={user} match={props.match}/>
+            <CommentUpdate user={user} msgAlert={this.msgAlert} match={props.match}/>
           )}/>
         </div>
       </Fragment>

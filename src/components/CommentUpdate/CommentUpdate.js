@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
 import { Redirect } from 'react-router-dom'
+import messages from '../AutoDismissAlert/messages'
 
 class CommentUpdate extends React.Component {
   constructor (props) {
@@ -12,7 +13,8 @@ class CommentUpdate extends React.Component {
         date: ''
       },
       isLoaded: false,
-      isUpdated: false
+      isUpdated: false,
+      owner: ''
     }
   }
   componentDidMount () {
@@ -22,6 +24,7 @@ class CommentUpdate extends React.Component {
           isLoaded: true,
           comment: response.data.comment
         })
+        this.setState({ owner: response.data.comment.owner })
       })
       .catch(console.error)
   }
@@ -51,14 +54,24 @@ class CommentUpdate extends React.Component {
         comment: newComment
       }
     })
-      .then((response) => this.setState({ isUpdated: true }))
+      .then((response) => {
+        this.setState({ isUpdated: true })
+        this.props.msgAlert({
+          heading: 'Updated Successfully',
+          message: messages.updateCommentSuccess,
+          variant: 'success'
+        })
+      })
       .catch(console.error)
   }
   render () {
+    if (!this.props.user) {
+      return <Redirect to="/" />
+    }
     if (this.state.isUpdated !== false) {
       return <Redirect to="/" />
     }
-    return (
+    let jsx = (
       <div className='comment-update'>
         <h2>Update Your Comment</h2>
         <form onSubmit={this.handleSubmit}>
@@ -68,6 +81,11 @@ class CommentUpdate extends React.Component {
         </form>
       </div>
     )
+    console.log(this.props.user._id, this.props.owner, 'This is ours')
+    if (this.state.owner !== this.props.user._id) {
+      jsx = ('')
+    }
+    return (jsx)
   }
 }
 export default CommentUpdate
