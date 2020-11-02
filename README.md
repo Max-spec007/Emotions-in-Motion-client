@@ -1,4 +1,4 @@
-![Emotions in Motion Logo](https://imgur.com/aTjhg83)
+![Imgur](https://imgur.com/aTjhg83)
 # Emotions in Motion ~ A comment creator for the Soul. 😇
 Emotions in Motion is a place for the mind, body, and soul. This is a mental
 health app that is geared towards inspiring others. Come join us and feel
@@ -57,7 +57,7 @@ the emoji's of their choice. I would also like to have a like counter, where the
 number of likes for a particular comment or comments are recorded. Lastly,
 ensuring the comments created are appropriate and meet the apps standards.
 ## Emotions in Motion App Screenshot
-![](https://imgur.com/aIiWIsg)
+![Imgur](https://imgur.com/aIiWIsg)
 ## Installation
 - Fork and clone this repository.
 - Create and checkout to a new branch, training, for your work.
