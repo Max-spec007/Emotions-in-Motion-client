@@ -81,7 +81,6 @@ class CommentUpdate extends React.Component {
         </form>
       </div>
     )
-    console.log(this.props.user._id, this.props.owner, 'This is ours')
     if (this.state.owner !== this.props.user._id) {
       jsx = ('')
     }
