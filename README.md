@@ -1,5 +1,5 @@
 ![](https://user-images.githubusercontent.com/61510535/97828964-8e1efe00-1c96-11eb-8971-cb8e355d18fa.png)
-# Emotions in Motion ~ A comment creator for the Soul. 😇
+# A comment creator for the Soul. 😇
 Emotions in Motion is a place for the mind, body, and soul. This is a mental
 health app that is geared towards inspiring others. Come join us and feel
 inspired by Emotions in Motion!
@@ -62,5 +62,5 @@ ensuring the comments created are appropriate and meet the apps standards.
 - Fork and clone this repository.
 - Create and checkout to a new branch, training, for your work.
 - Install dependencies with `npm install`.
-- Lastly, open a new tab in the terminal window and open the repository in
-  Atom with the command of `atom .`
+- Lastly, open a new tab in the terminal window and open the repository in Atom
+  with the command of `atom .`
